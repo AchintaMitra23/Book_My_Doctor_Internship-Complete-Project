@@ -1,0 +1,46 @@
+<section>
+    <div class="card" style="width: 25rem;">
+        <div class="card-body">
+            <h5 class="card-title">Patient Profile</h5>
+            <p class="card-text">Edit your profile according to your choices.</p>
+            <form autocomplete="off" [formGroup]="patForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="">User Name : </label>
+                    <input type="text" name="userName" class="form-control" placeholder="Full Name (e.g. John Doe)" formControlName="userName" [ngClass]="{'is-invalid':patForm.get('userName')?.touched && patForm.get('userName')?.invalid}">
+                    <div *ngIf="patForm.controls.userName.touched && patForm.controls.userName.invalid">
+                        <small class="text-danger" *ngIf="patForm.controls.userName.errors?.required">Full Name is required!</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Email ID : </label>
+                    <input type="email" name="emailID" class="form-control" placeholder="Email ID (e.g. john@yahoo.com)" formControlName="emailID" [ngClass]="{'is-invalid':patForm.get('emailID')?.touched && patForm.get('emailID')?.invalid}">
+                    <div *ngIf="patForm.controls.emailID.touched && patForm.controls.emailID.invalid">
+                        <small class="text-danger" *ngIf="patForm.controls.emailID.errors?.required">Email ID is required!</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Patient Name : </label>
+                    <input type="text" name="patientName" class="form-control" placeholder="Enter Patient Name" formControlName="patientName" [ngClass]="{'is-invalid':patForm.get('patientName')?.touched && patForm.get('patientName')?.invalid}">
+                    <div *ngIf="patForm.controls.patientName.touched && patForm.controls.patientName.invalid">
+                        <small class="text-danger" *ngIf="patForm.controls.patientName.errors?.required">Patient Name is required!</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Patient Mobile No : </label>
+                    <input type="tel" name="mobileNo" class="form-control" placeholder="Enter Patient Contact" formControlName="mobileNo" [ngClass]="{'is-invalid':patForm.get('mobileNo')?.touched && patForm.get('mobileNo')?.invalid}">
+                    <div *ngIf="patForm.controls.mobileNo.touched && patForm.controls.mobileNo.invalid">
+                        <small class="text-danger" *ngIf="patForm.controls.mobileNo.errors?.required">Mobile No is required!</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Patient Address : </label>
+                    <input type="text" name="address" class="form-control" placeholder="Enter Patient Address" formControlName="address" [ngClass]="{'is-invalid':patForm.get('address')?.touched && patForm.get('address')?.invalid}">
+                    <div *ngIf="patForm.controls.address.touched && patForm.controls.address.invalid">
+                        <small class="text-danger" *ngIf="patForm.controls.address.errors?.required">Address is required!</small>
+                    </div>
+                </div>
+                <button class="card-link btn-success">Update Patient</button>
+            </form>
+        </div>
+    </div>
+</section>

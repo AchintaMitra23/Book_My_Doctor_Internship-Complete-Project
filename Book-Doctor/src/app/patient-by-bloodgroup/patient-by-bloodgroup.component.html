@@ -1,0 +1,62 @@
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+      <h1 class="display-4">Find  patient by bloodgroup </h1><br>
+     
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+               <div id="custom-search-input">
+                                <div class="input-group col-md-12" style="text-align: center">
+                                    <input type="text" class="search-query form-control" placeholder="Search With patient bloodgroup"  name="bloodGroup" [(ngModel)]="bloodGroup"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" (click)="findPatientByBloodGroup()">
+                                            <span class=" glyphicon glyphicon-search"></span>search
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+    </div>
+    </div> <br><br>
+
+    
+       
+
+
+            
+<br><br>
+<table class="table table-striped">
+    <thead>
+  <tr>
+    <th>patient id</th>
+    <th>patient name</th>
+    <th>age</th>
+    <th>address</th>
+    <th>blood group</th>
+    <th>gender</th>
+    <th>mobile no</th>
+    
+    
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let item of patients">
+    <td>{{item.patientId}}</td>
+    <td>{{item.patientName}}</td>
+    <td>{{item.age}}</td>
+    <td>{{item.address}}</td>
+    <td>{{item.bloodGroup}}</td>
+    <td>{{item.gender}}</td>
+    <td>{{item.mobileNo}}</td>
+   
+    
+  </tr>
+</tbody>
+</table> 
+
+ 
+
+
+

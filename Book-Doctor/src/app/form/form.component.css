@@ -1,0 +1,172 @@
+    .form-title {
+        color: white;
+        font-size: 30px;
+        font-weight: bolder;
+        padding-top: 100px;
+        font-family: inherit;
+    }
+
+    .card {
+        border-radius: 25px;
+        transform: translate(125%, 25%);
+        box-shadow: 0 0 3px 3px whitesmoke inset;
+        padding: 20px;
+        background-color: transparent!important;
+    }
+
+    .card-title {
+        color: white;
+        font-size: 20px;
+        font-weight: bolder;
+        font-family: sans-serif;
+    }
+
+    .card-subtitle {
+        font-size: 12px;
+        font-weight: 500;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin-bottom: 50px;
+        margin-top: 10px;
+        color: lightcoral;
+        line-height: 20px;
+    }
+
+    input,
+    select {
+        margin: 5px 0;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: brown;
+        padding: 5px 15px;
+        width: 100%;
+        border: 0;
+        box-shadow: 0 0 1px 1px grey inset;
+    }
+
+    input:focus,
+    select:focus {
+        outline: 0;
+    }
+
+    .forgotPass {
+        color: lightcoral;
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        margin-top: 5px;
+        text-align: end;
+        cursor: pointer;
+    }
+
+    .signinOpt {
+        font-size: 13px;
+        font-weight: bolder;
+    }
+
+    .social-ul {
+        display: inline-flex;
+        text-decoration: none;
+        list-style-type: none;
+        width: 100%;
+    }
+
+    .social-link {
+        margin: 0 20px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    small {
+        font-weight: bolder;
+        font-size: 12px;
+    }
+
+    input [type="radio"] {
+        width: auto;
+    }
+
+    button {
+        box-shadow: 0 0 1px 2px white inset;
+        padding: 10px 25px;
+        border: 0;
+        outline: 0;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    button:hover,
+    button.active {
+        outline: 0;
+    }
+
+    .navbar {
+        background-color: transparent;
+    }
+
+    .navbar-brand::before,
+    .navbar-brand::after {
+        content: '|';
+        margin: 0 5px;
+        color: black;
+        position: relative;
+    }
+
+    .nav-item {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .nav-link {
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all 1s linear;
+        font-family: cursive;
+    }
+
+    .nav-link span {
+        color: wheat;
+        border-bottom: 2px solid brown;
+        padding-bottom: 2px;
+        margin-right: 10px;
+        transition: all 1s linear;
+    }
+
+    .nav-link:hover {
+        color: lightcoral;
+    }
+
+    .nav-link:hover span {
+        color: lightsalmon;
+    }
+
+    .btn-login,
+    .btn-register {
+        color: darkblue;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 7.5px 12.5px;
+        background-color: lightcoral;
+        margin-right: 5px;
+        text-transform: uppercase;
+        border-radius: 25px;
+    }
+
+    .btn-register {
+        background-color: transparent;
+        border: 1px solid lightcoral;
+    }
+
+    .form {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src/assets/images/background1.jpg");
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }

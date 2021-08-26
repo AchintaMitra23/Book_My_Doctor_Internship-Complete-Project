@@ -1,0 +1,32 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="display-4">ALL ADMINS</h1><br>
+
+    </div>
+</div>
+
+
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>admin id</th>
+            <th>admin name</th>
+            <th>contact number</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of admins">
+            <td>{{item.adminId}}</td>
+            <td>{{item.adminName}}</td>
+            <td>{{item.contactNumber}}</td>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteAdminById(item.adminId)"><span class="glyphicon glyphicon-remove"></span>Delete</button></td>
+
+
+        </tr>
+    </tbody>
+</table>

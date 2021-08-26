@@ -1,0 +1,43 @@
+<h3 class="form-title text-center">Provide Feedback on Appointments</h3>
+<section class="mb-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 text-center">
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top" src="/assets/images/card-logo1.jpg" alt="Card image cap" width="100%" style="border-radius: 25px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Give a Feedback</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Please rate our doctor on checkups</h6><br>
+                        <form autocomplete="off" [formGroup]=feedForm (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                                <input type="number" name="patientId" class="form-control" placeholder="Enter Patient ID" formControlName="patientId" [ngClass]="{'is-invalid':feedForm.get('patientId')?.touched && feedForm.get('patientId')?.invalid}">
+                                <div *ngIf="feedForm.controls.patientId.touched && feedForm.controls.patientId.invalid">
+                                    <small class="text-danger" *ngIf="feedForm.controls.patientId.errors?.required">Patient ID is required!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="doctorId" class="form-control" placeholder="Enter Doctor ID" formControlName="doctorId" [ngClass]="{'is-invalid':feedForm.get('doctorId')?.touched && feedForm.get('doctorId')?.invalid}">
+                                <div *ngIf="feedForm.controls.doctorId.touched && feedForm.controls.doctorId.invalid">
+                                    <small class="text-danger" *ngIf="feedForm.controls.doctorId.errors?.required">Doctor ID is required!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="rating" class="form-control" placeholder="Enter Rating (Out of 10)" formControlName="rating" [ngClass]="{'is-invalid':feedForm.get('rating')?.touched && feedForm.get('rating')?.invalid}">
+                                <div *ngIf="feedForm.controls.rating.touched && feedForm.controls.rating.invalid">
+                                    <small class="text-danger" *ngIf="feedForm.controls.rating.errors?.required">Rating is required!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="feedbackComment" class="form-control" placeholder="Enter Feedback Comment" formControlName="feedbackComment" [ngClass]="{'is-invalid':feedForm.get('feedbackComment')?.touched && feedForm.get('feedbackComment')?.invalid}">
+                                <div *ngIf="feedForm.controls.feedbackComment.touched && feedForm.controls.feedbackComment.invalid">
+                                    <small class="text-danger" *ngIf="feedForm.controls.feedbackComment.errors?.required">Feedback Comment is required!</small>
+                                </div>
+                            </div>
+                            <button class="card-link" [disabled]="!feedForm.valid">Rate Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

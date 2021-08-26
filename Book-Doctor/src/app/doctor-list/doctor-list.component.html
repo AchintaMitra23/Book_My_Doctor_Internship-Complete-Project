@@ -1,0 +1,45 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="display-4">OUR DOCTORS</h1><br>
+
+    </div>
+</div>
+
+
+
+
+<!-- <ul>
+  <li *ngFor="let item of doctors">
+        {{item.userId}}---{{item.userName}}--{{item.emailID}}--{{item.password}}--{{item.role}}--{{item.LoggedIn}}
+       {{item.doctorId}}---{{item.doctorName}}--{{item.speciality}}--{{item.location}}--{{item.hospitalName}}--{{item.mobileNo}}--{{item.chargesPerVisit}}
+
+</li>
+  </ul>   -->
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>doctor id</th>
+            <th>doctor name</th>
+            <th>speciality</th>
+            <th>location</th>
+            <th>hospital name</th>
+            <th>mobile no</th>
+            <th>charges per visit</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of doctors">
+            <td>{{item.doctorId}}</td>
+            <td>{{item.doctorName}}</td>
+            <td>{{item.speciality}}</td>
+            <td>{{item.location}}</td>
+            <td>{{item.hospitalName}}</td>
+            <td>{{item.mobileNo}}</td>
+            <td>{{item.chargesPerVisit}}</td>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteDoctorById(item.doctorId)"><span class="glyphicon glyphicon-remove"></span>Delete</button></td>
+
+        </tr>
+    </tbody>
+</table>

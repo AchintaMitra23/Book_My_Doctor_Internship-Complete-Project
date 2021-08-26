@@ -1,0 +1,142 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="assets/images/websitelogo.png" alt="" srcset="" height="25" style="padding: 0;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto text-center">
+            <li class="nav-item"><a class="nav-link" routerLink="/home"><span><i class="fas fa-home"></i></span>Home</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/about"><span><i class="far fa-address-card"></i></span>About</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto text-center">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Register
+    </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" [routerLink]="['/patient-reg']" routerLinkActive="router-link-active">Register As Patient</a>
+                    <a class="dropdown-item" href="#" [routerLink]="['/doctor-reg']" routerLinkActive="router-link-active">Register As Doctor</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="/form">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<h3 class="form-title text-center">
+    Provide Doctor Complete Details</h3>
+<section class="mb-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 text-center">
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top" src="/assets/images/card-logo1.jpg" alt="Card image cap" width="100%" style="border-radius: 25px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Register as Doctor</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Please register before use our services</h6><br>
+                        <form autocomplete="off" [formGroup]=docForm (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                                <input type="text" name="userName" class="form-control" placeholder="User Name (e.g. JohnDoe)" formControlName="userName" [ngClass]="{'is-invalid':docForm.get('userName')?.touched && docForm.get('userName')?.invalid}">
+                                <div *ngIf="docForm.controls.userName.touched && docForm.controls.userName.invalid">
+                                    <small class="text-danger" *ngIf="docForm.controls.userName.errors?.required">Full Name is required!</small>
+                                    <small class="text-danger" *ngIf="docForm.controls.userName.errors?.pattern">Please Give proper full name!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="emailID" class="form-control" placeholder="Email ID (e.g. john@yahoo.com)" formControlName="emailID" [ngClass]="{'is-invalid':docForm.get('emailID')?.touched && docForm.get('emailID')?.invalid}">
+                                <div *ngIf="docForm.controls.emailID.touched && docForm.controls.emailID.invalid">
+                                    <small class="text-danger" *ngIf="docForm.controls.emailID.errors?.required">Email ID is required!</small>
+                                    <small class="text-danger" *ngIf="docForm.controls.emailID.errors?.email">Valid Email ID is required!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" placeholder="Password (e.g. Jkoigh#@12345)" formControlName="password" [ngClass]="{'is-invalid':docForm.get('password')?.touched && docForm.get('password')?.invalid}">
+                                <div *ngIf="(docForm.controls.password.touched && docForm.controls.password.invalid)">
+                                    <small class="text-danger" *ngIf="docForm.controls.password.errors?.required">Password is required!</small>
+                                    <small class="text-danger" *ngIf="docForm.controls.password.errors?.pattern">Password must contains Capital, Small Letters, Number and Special Character without any space</small>
+                                    <small class="text-danger" *ngIf="docForm.controls.password.errors?.minLength">Password must contains atleast 8 characters</small>
+                                    <small class="text-danger" *ngIf="docForm.controls.password.errors?.maxLength">Password must contains atmost 30 characters</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="role" class="form-control " placeholder="Role (e.g. Patient / Doctor)" formControlName="role" [ngClass]="{ 'is-invalid':docForm.get('role')?.touched && docForm.get('role')?.invalid} ">
+                                <div *ngIf="docForm.controls.role.touched && docForm.controls.role.invalid ">
+                                    <small class="text-danger " *ngIf="docForm.controls.role.errors?.required ">Role is required!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="doctorName" class="form-control" placeholder="Enter Doctor Full Name" formControlName="doctorName" [ngClass]="{'is-invalid':docForm.get('doctorName')?.touched && docForm.get('doctorName')?.invalid}">
+                                <div *ngIf="docForm.controls.doctorName.touched && docForm.controls.doctorName.invalid">
+                                    <small class="text-danger" *ngIf="docForm.controls.doctorName.errors?.required">Doctor Name is required!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="mobileNo" class="form-control" placeholder="Enter Doctor Contact" formControlName="mobileNo" [ngClass]="{'is-invalid':docForm.get('mobileNo')?.touched && docForm.get('mobileNo')?.invalid}">
+                                <div *ngIf="docForm.controls.mobileNo.touched && docForm.controls.mobileNo.invalid">
+                                    <small class="text-danger" *ngIf="docForm.controls.mobileNo.errors?.required">Mobile No is required!</small>
+                                    <small class="text-danger " *ngIf="docForm.controls.mobileNo.errors?.minLength ">Mobile No should contain 10 digits</small>
+                                    <small class="text-danger " *ngIf="docForm.controls.mobileNo.errors?.maxLength ">Mobile No should contain 10 digits</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" name="speciality" class="form-control" formControlName="speciality" [ngClass]="{'is-invalid':docForm.get('speciality')?.touched && docForm.get('speciality')?.invalid}">
+                                  <option value="">Select your Speciality</option>
+                                  <option value="Gynaecologist">Gynaecologist</option>
+                                  <option value="Nephrologist">Nephrologist</option>
+                                  <option value="Cardiologist">Cardiologist</option>
+                                  <option value="Neurologist">Neurologist</option>
+                                  <option value="ENT-Specialist">ENT-Specialist</option>
+                                  <option value="Oncologist">Oncologist</option>
+                                </select>
+                                <!-- <input type="text" name="speciality" class="form-control" placeholder="Enter Doctor Speciality" formControlName="speciality" [ngClass]="{'is-invalid':docForm.get('speciality')?.touched && docForm.get('speciality')?.invalid}"> -->
+                                <div *ngIf="docForm.controls.speciality.touched && docForm.controls.speciality.invalid">
+                                    <small class="text-danger" *ngIf="docForm.controls.speciality.errors?.required">Speciality is required!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" name="hospitalName" class="form-control" formControlName="hospitalName" [ngClass]="{'is-invalid':docForm.get('hospitalName')?.touched && docForm.get('hospitalName')?.invalid}">
+                                <option value="">Select your Hospital Name</option>
+                                <option value="Calcutta Medical Center">Calcutta Medical Center</option>
+                                <option value="AMRI Hospital">AMRI Hospital</option>
+                                <option value="Fortis Hospital">Fortis Hospital</option>
+                                <option value="Neel Ratan Sarkar">Neel Ratan Sarkar</option>
+                                <option value="PG Hospital">PG Hospital</option>
+                              </select>
+                                <!-- <input type="text" name="hospitalName" class="form-control" placeholder="Enter Doctor Hospital Name" formControlName="hospitalName" [ngClass]="{'is-invalid':docForm.get('hospitalName')?.touched && docForm.get('hospitalName')?.invalid}"> -->
+                                <div *ngIf="docForm.controls.hospitalName.touched && docForm.controls.hospitalName.invalid">
+                                    <small class="text-danger" *ngIf="docForm.controls.hospitalName.errors?.required">Hospital Name is required!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" name="location" class="form-control" formControlName="location" [ngClass]="{'is-invalid':docForm.get('location')?.touched && docForm.get('location')?.invalid}">
+                                <option value="">Select your Location</option>
+                                <option value="Kolkata">Kolkata</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Bangalore">Bangalore</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Mumbai">Mumbai</option>
+                              </select>
+                                <!-- <input type="text" name="location" class="form-control" placeholder="Enter Doctor Location" formControlName="location" [ngClass]="{'is-invalid':docForm.get('location')?.touched && docForm.get('location')?.invalid}"> -->
+                                <div *ngIf="docForm.controls.location.touched && docForm.controls.location.invalid">
+                                    <small class="text-danger" *ngIf="docForm.controls.location.errors?.required">Location is required!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="chargesPerVisit" class="form-control" placeholder="Enter Doctor Charge" formControlName="chargesPerVisit" [ngClass]="{'is-invalid':docForm.get('chargesPerVisit')?.touched && docForm.get('chargesPerVisit')?.invalid}">
+                                <div *ngIf="docForm.controls.chargesPerVisit.touched && docForm.controls.chargesPerVisit.invalid">
+                                    <small class="text-danger" *ngIf="docForm.controls.chargesPerVisit.errors?.required">Charge Per Visit is required!</small>
+                                </div>
+                            </div>
+                            <button class="card-link" [disabled]="!docForm.valid">Register As Doctor</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

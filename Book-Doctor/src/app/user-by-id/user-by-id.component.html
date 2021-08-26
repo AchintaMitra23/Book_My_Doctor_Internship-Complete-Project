@@ -1,0 +1,52 @@
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+      <h1 class="display-4">Find  user by id </h1><br>
+     
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+               <div id="custom-search-input">
+                                <div class="input-group col-md-12" style="text-align: center">
+                                    <input type="text" class="search-query form-control" placeholder="Search With user id"  name="userId" [(ngModel)]="userId"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" (click)="findUserById()">
+                                            <span class=" glyphicon glyphicon-search"></span>search
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+    </div>
+    </div> <br><br>
+
+
+            
+<br><br>
+<table class="table table-striped">
+    <thead>
+  <tr>
+    <th>user id</th>
+    <th>username</th>
+    <th>email id</th>
+    <th>role</th>
+    
+    
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>{{users.userId}}</td>
+    <td>{{users.userName}}</td>
+     <td>{{users.emailID}}</td>
+      <td>{{users.role}}</td>
+      <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteUserById(users.userId)"><span class="glyphicon glyphicon-remove"></span>Delete</button></td>
+    
+  </tr>
+</tbody>
+</table> 
+
+ 
+
+

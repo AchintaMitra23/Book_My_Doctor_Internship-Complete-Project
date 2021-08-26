@@ -1,0 +1,12 @@
+server:
+    port: 2245
+spring:
+    datasource:
+        driverClassName: oracle.jdbc.driver.OracleDriver
+        password: achintamitra23
+        url: jdbc:oracle:thin:@localhost:1521:xe
+        username: system
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true

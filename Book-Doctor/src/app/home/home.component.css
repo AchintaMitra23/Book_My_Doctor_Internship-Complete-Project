@@ -1,0 +1,199 @@
+.navbar {
+    background-image: linear-gradient(lightcyan, rgb(200, 240, 240));
+}
+
+.navbar-brand::before,
+.navbar-brand::after {
+    content: '|';
+    margin: 0 5px;
+    color: black;
+    position: relative;
+}
+
+.nav-item {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.nav-link {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 1s linear;
+    font-family: cursive;
+}
+
+.nav-link span {
+    color: brown;
+    border-bottom: 2px solid brown;
+    padding-bottom: 2px;
+    margin-right: 10px;
+    transition: all 1s linear;
+}
+
+.nav-link:hover {
+    color: brown;
+}
+
+.nav-link:hover span {
+    color: chocolate;
+}
+
+.btn-login,
+.btn-register {
+    color: darkblue;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 7.5px 12.5px;
+    background-color: lightcoral;
+    margin-right: 5px;
+    text-transform: uppercase;
+    border-radius: 25px;
+}
+
+.btn-register {
+    background-color: transparent;
+    border: 1px solid lightcoral;
+}
+
+.card-title {
+    color: brown;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+.card-subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px 10px;
+}
+
+input,
+select {
+    margin: 5px 0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: brown;
+    padding: 5px 15px;
+    width: 100%;
+    border: 0;
+    box-shadow: 0 0 1px 1px grey inset;
+}
+
+input:focus,
+select:focus {
+    outline: 0;
+}
+
+.carousel-caption {
+    transform: rotateY(50%);
+}
+
+.carousel-link {
+    color: black;
+    background-color: lightsalmon;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    border-radius: 25px;
+    padding: 7.5px 15px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in;
+    font-family: monospace;
+}
+
+.carousel-caption .card {
+    left: 32.5%;
+}
+
+.carousel-link:hover {
+    text-decoration: none;
+    background-color: transparent;
+    box-shadow: 0 0 2px 2px brown inset;
+}
+
+.arrow {
+    color: crimson;
+    font-size: 30px;
+}
+
+.head-title {
+    color: darkblue;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: cursive;
+    margin-bottom: 25px;
+}
+
+.head-title span {
+    color: burlywood;
+    background-color: darkgreen;
+    padding: 5px 15px;
+}
+
+.stretch-card>.card {
+    width: 100%;
+    min-width: 100%;
+}
+
+.flex {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.padding {
+    padding: 2.5rem;
+}
+
+.owl-carousel .item {
+    margin: 2.5px;
+}
+
+.owl-carousel {
+    margin-bottom: 15px
+}
+
+.card-title {
+    color: darkblue;
+    font-size: 23px;
+    font-weight: bolder;
+}
+
+.card-subtitle {
+    font-size: 13px;
+    margin: 3px 0;
+    font-weight: 500;
+}
+
+.card-subtitle span {
+    color: orange;
+    font-weight: bolder;
+}
+
+.card-text,
+.card-text1 {
+    font-size: 14px;
+    color: brown;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.card-text span {
+    color: darkblue;
+    font-size: 18px;
+}
+
+.checked {
+    color: orange;
+}
+
+.title1 {
+    font-size: 20px;
+}

@@ -1,0 +1,108 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="display-4">Find Doctors of your Choice </h1><br>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div id="custom-search-input">
+            <div class="input-group col-md-12" style="text-align: center">
+                <!-- <input type="text" class="search-query form-control" placeholder="Search With speciality" name="speciality" [(ngModel)]="speciality" /> -->
+                <select name="" id="" name="speciality" class="form-control" [(ngModel)]="speciality">
+                  <option value="">Select your Speciality</option>
+                  <option value="Gynaecologist">Gynaecologist</option>
+                  <option value="Nephrologist">Nephrologist</option>
+                  <option value="Cardiologist">Cardiologist</option>
+                  <option value="Neurologist">Neurologist</option>
+                  <option value="ENT-Specialist">ENT-Specialist</option>
+                  <option value="Oncologist">Oncologist</option>
+                </select>
+                <span class=" input-group-btn ">
+                                        <button class="btn btn-danger " type="button " (click)="findDoctorBySpeciality() ">
+                                            <span class=" glyphicon glyphicon-search "></span>search
+                </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div> <br><br>
+
+<div class="container ">
+    <div class="row ">
+        <div id="custom-search-input ">
+            <div class="input-group col-md-12 " style="text-align: center ">
+                <!-- <input type="text " class="search-query form-control " placeholder="Search With location " name="location " [(ngModel)]="location" /> -->
+                <select name="" id="" name="location" class="form-control" [(ngModel)]="location">
+                  <option value="">Select your Location</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Mumbai">Mumbai</option>
+                </select>
+                <span class="input-group-btn ">
+                                            <button class="btn btn-danger " type="button " (click)="findDoctorByLocation() ">
+                                                <span class=" glyphicon glyphicon-search "></span>search
+                </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div> <br><br>
+
+<div class="container ">
+    <div class="row ">
+        <div id="custom-search-input ">
+            <div class="input-group col-md-12 " style="text-align: center ">
+                <!-- <input type="text " class="search-query form-control " placeholder="Search With hospital name " name="hospitalName " [(ngModel)]="hospitalName" /> -->
+                <select name="" id="" name="hospitalName" class="form-control" [(ngModel)]="hospitalName">
+                  <option value="">Select your Hospital Name</option>
+                  <option value="Calcutta Medical Center">Calcutta Medical Center</option>
+                  <option value="AMRI Hospital">AMRI Hospital</option>
+                  <option value="Fortis Hospital">Fortis Hospital</option>
+                  <option value="Neel Ratan Sarkar">Neel Ratan Sarkar</option>
+                  <option value="PG Hospital">PG Hospital</option>
+                </select>
+                <span class="input-group-btn ">
+                                                <button class="btn btn-danger " type="button " (click)="findDoctorByHospitalName() ">
+                                                    <span class=" glyphicon glyphicon-search "></span>search
+                </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<br><br>
+<table class="table table-striped ">
+    <thead>
+        <tr>
+            <th>doctor id</th>
+            <th>doctor name</th>
+            <th>speciality</th>
+            <th>location</th>
+            <th>hospital name</th>
+            <th>mobile no</th>
+            <th>charges per visit</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of doctors ">
+            <td>{{item.doctorId}}</td>
+            <td>{{item.doctorName}}</td>
+            <td>{{item.speciality}}</td>
+            <td>{{item.location}}</td>
+            <td>{{item.hospitalName}}</td>
+            <td>{{item.mobileNo}}</td>
+            <td>{{item.chargesPerVisit}}</td>
+
+
+        </tr>
+    </tbody>
+</table>

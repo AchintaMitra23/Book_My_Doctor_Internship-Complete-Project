@@ -1,0 +1,45 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="display-4">Find all patients </h1><br>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<br><br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>patient id</th>
+            <th>patient name</th>
+            <th>age</th>
+            <th>address</th>
+            <th>blood group</th>
+            <th>gender</th>
+            <th>mobile no</th>
+            <th></th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of patients">
+            <td>{{item.patientId}}</td>
+            <td>{{item.patientName}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.bloodGroup}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.mobileNo}}</td>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deletePatientById(item.patientId)"><span class="glyphicon glyphicon-remove"></span>Delete</button></td>
+
+
+        </tr>
+    </tbody>
+</table>

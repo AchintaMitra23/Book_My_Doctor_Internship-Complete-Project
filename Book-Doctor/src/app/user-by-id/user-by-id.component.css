@@ -1,0 +1,37 @@
+h1
+{
+    
+    color:darkblue;
+   
+
+}
+
+/*div
+{
+    border: 2px solid red;
+    color:blue;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+button{
+    width: 100px;
+    height:80px;
+    background-color:blueviolet;
+    color: wheat;
+    font-size: 20px;
+} */
+
+.jumbotron {
+     margin-bottom: 100px;
+    margin-top: 100px; 
+    background-color:honeydew;
+}
+h2{
+    
+    margin-top: 50px;
+}
+
+/* .dropdown-menu dropdown-menu-left{
+    right: 0;
+} */

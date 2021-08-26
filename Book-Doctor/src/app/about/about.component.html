@@ -1,0 +1,69 @@
+<section class="form">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="assets/images/websitelogo.png" alt="" srcset="" height="25" style="padding: 0;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto text-center">
+                <li class="nav-item"><a class="nav-link" routerLink="/home"><span><i class="fas fa-home"></i></span>Home</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/about"><span><i class="far fa-address-card"></i></span>About</a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Register
+    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#" [routerLink]="['/patient-reg']" routerLinkActive="router-link-active">Register As Patient</a>
+                        <a class="dropdown-item" href="#" [routerLink]="['/doctor-reg']" routerLinkActive="router-link-active">Register As Doctor</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" routerLink="/form">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="about1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 text-center">
+                    <img src="../assets/images/websitelogo.png" alt="" srcset="" class="mt-5">
+                </div>
+                <div class="col-lg-6 col-sm-12 text-center">
+                    <h3 class="about-title mb-4">About Our App</h3>
+                    <h4 class="about-subtitle">Doctient Application is an user friendly application which will help people to book doctor appointments online.</h4>
+                    <ul class="about-ul">
+                        <li class="about-list"><span><i class="far fa-hand-point-right"></i></span>It has secured Login Portal for authentication.</li>
+                        <li class="about-list"><span><i class="far fa-hand-point-right"></i></span>Easy access for patients to different doctors.</li>
+                        <li class="about-list"><span><i class="far fa-hand-point-right"></i></span>Patients can book appointments with dates available.</li>
+                        <li class="about-list"><span><i class="far fa-hand-point-right"></i></span>Easy access for doctors to their appointments.</li>
+                        <li class="about-list"><span><i class="far fa-hand-point-right"></i></span>Patients can give the feebacks to different doctors.</li>
+                        <li class="about-list"><span><i class="far fa-hand-point-right"></i></span>Admin control for ease of handling.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about2">
+        <h5 class="about-head">Demo Services</h5> <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 text-center">
+                    <video controls width="100%"><source src="/assets/videos/video1.mp4"></video>
+                </div>
+                <div class="col-lg-4 col-sm-12 text-center">
+                    <video controls width="100%"><source src="/assets/videos/video2.mp4"></video>
+                </div>
+                <div class="col-lg-4 col-sm-12 text-center">
+                    <video controls width="100%"><source src="/assets/videos/video3.mp4"></video>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

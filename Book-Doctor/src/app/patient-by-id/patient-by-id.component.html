@@ -1,0 +1,60 @@
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+      <h1 class="display-4">Find  patient by id </h1><br>
+     
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+               <div id="custom-search-input">
+                                <div class="input-group col-md-12" style="text-align: center">
+                                    <input type="text" class="search-query form-control" placeholder="Search With patient id"  name="patientId" [(ngModel)]="patientId"/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" (click)="findPatientById()">
+                                            <span class=" glyphicon glyphicon-search"></span>search
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+    </div>
+    </div> <br><br>
+
+    
+       
+
+
+            
+<br><br>
+<table class="table table-striped">
+    <thead>
+  <tr>
+    <th>patient id</th>
+    <th>patient name</th>
+    <th>age</th>
+    <th>address</th>
+    <th>blood group</th>
+    <th>gender</th>
+    <th>mobile no</th>
+    
+    
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>{{patients.patientId}}</td>
+    <td>{{patients.patientName}}</td>
+     <td>{{patients.age}}</td>
+    <td>{{patients.address}}</td>
+    <td>{{patients.bloodGroup}}</td>
+    <td>{{patients.gender}}</td>
+    <td>{{patients.mobileNo}}</td> 
+   
+    
+  </tr>
+</tbody>
+</table> 
+
+ 
+

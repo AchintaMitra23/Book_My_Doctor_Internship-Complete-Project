@@ -1,0 +1,11 @@
+h2 {
+    transform: translate(75%, 30%);
+    position: absolute;
+    top: 40%;
+    color: darkblue;
+}
+
+h2 span {
+    color: darkred;
+    letter-spacing: 2px;
+}

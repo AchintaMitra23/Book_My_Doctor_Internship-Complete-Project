@@ -1,0 +1,110 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="assets/images/websitelogo.png" alt="" srcset="" height="25" style="padding: 0;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto text-center">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <!-- <img src="https://previews.123rf.com/images/jemastock/jemastock1904/jemastock190411989/123907013-woman-face-cartoon-profile-vector-illustration-graphic-design.jpg" alt="mdo" width="32" height="32" class="rounded-circle"> -->
+                    <i class="fas fa-user-md fa-lg"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" (click)="gotoProfile()" routerLinkActive=" router-link-active ">My Profile</a>
+                    <a class="dropdown-item " (click)="logout() " routerLinkActive=" router-link-active ">Log out</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container ">
+    <div class="jumbotron jumbotron-fluid j1 ">
+        <div class="container ">
+            <h1 class="display-4 my-5 ">Saving mankind is our motto</h1><br>
+            <p class="lead "><strong>24/7 Assistance available</strong><br> Register here! If your life's aim is similar as ours then lots of patients are waiting for your assistance. Provide consultations hassle-free and recieve feedback from your patients for better
+                growth with the help of our app.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container ">
+    <div class="row ">
+        <div class="col-lg-4 text-center ">
+            <img class="rounded-circle " src="https://securecdn.pymnts.com/wp-content/uploads/2017/04/Doctor-1000x600.jpg " alt="Generic placeholder image " width="160 " height="140 ">
+            <h2>View Your Appointments</h2>
+            <p>View your scheduled appointments for your day and show your expertise by answering their queries. </p>
+            <p><a class="btn btn-outline-success " href="# " role="button " routerLink="/ " (click)=getAppointmentsByDoc()>View »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+
+        <div class="col-lg-4 text-center ">
+            <img class="rounded-circle " src="https://cdn.britannica.com/s:1500x700,q:85/12/130512-004-AD0A7CA4/campus-Riverside-Ottawa-The-Hospital-Ont.jpg " alt="Generic placeholder image " width="160 " height="140 ">
+            <h2>View Feedback</h2>
+            <p>Check the feedback provided by your patients after consultations to know what the patient felt about you and to improve yourself or prove your credability to the world. </p>
+            <p><a class="btn btn-outline-success " href="# " role="button " routerLink="/ " (click)=getFeedbackByDoc()>View »</a></p> <br><br><br>
+        </div>
+        <!-- /.col-lg-4 -->
+
+        <div class="col-lg-4 text-center ">
+            <img class="rounded-circle " src="https://www.zonkafeedback.com/hubfs/patient%20feedback%20is%20important.png " alt="Generic placeholder image " width="160 " height="140 ">
+            <h2>View Patient History</h2>
+            <p>Check list of all the previous patients whom you have diagnosed to provide better consultations.</p>
+            <p><a class="btn btn-outline-success " href="# " role="button " routerLink="/ " (click)=viewPatientHist()>View »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+
+    </div>
+</div>
+
+<br><br><br>
+<div class="container ">
+    <div class="jumbotron jumbotron-fluid j2 ">
+        <div class="container ">
+            <h2>Latest news across the globe</h2><br>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container " id="t1 ">
+    <div class="row ">
+        <div class="col-lg-3 mx-3 ">
+            <div class="card " style="width: 18rem; ">
+                <img src="https://www.fda.gov/files/Coronavirus_3D_illustration_by_CDC_1600x900.png " height="200 px " width="100 px " class="card-img-top " alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">Coronavirus</h5>
+                    <p class="card-text ">Get all updates about Coronavirus across the world.</p>
+                    <a href="# " class="btn btn-primary ">view</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mx-5 ">
+            <div class="card " style="width: 18rem; ">
+                <img src=" https://new-img.patrika.com/upload/images/2015/07/24/Veg-Non-Veg-Capsule-1437729733_835x547.jpg " height="200 px " class="card-img-top " alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">Medicine</h5>
+                    <p class="card-text ">Learn about latest medicines coming in markets and all news about latest discoveries in medicine fields.</p>
+                    <a href="# " class="btn btn-primary ">view</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mx-2 ">
+            <div class="card " style="width: 18rem; ">
+                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/2D3E/production/_118428511_gettyimages-1215124320-170667a.jpg " class="card-img-top " alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">Diseases</h5>
+                    <p class="card-text ">Discover new diseases,its treatments and diagnosis around the world. </p>
+                    <a href="# " class="btn btn-primary ">View</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

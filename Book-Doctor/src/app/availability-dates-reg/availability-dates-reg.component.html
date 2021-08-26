@@ -1,0 +1,37 @@
+<h3 class="form-title text-center">Provide Availability Dates of doctors</h3>
+<section class="mb-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 text-center">
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top" src="/assets/images/card-logo1.jpg" alt="Card image cap" width="100%" style="border-radius: 25px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Saves the dates</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Please set the doctors available dates</h6><br>
+                        <form autocomplete="off" [formGroup]=availForm (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                                <input type="number" name="doctorId" class="form-control" placeholder="Enter Doctor ID" formControlName="doctorId" [ngClass]="{'is-invalid':availForm.get('doctorId')?.touched && availForm.get('doctorId')?.invalid}">
+                                <div *ngIf="availForm.controls.doctorId.touched && availForm.controls.doctorId.invalid">
+                                    <small class="text-danger" *ngIf="availForm.controls.doctorId.errors?.required">Doctor ID is required!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" name="fromDate" class="form-control" placeholder="Enter From Date" formControlName="fromDate" [ngClass]="{'is-invalid':availForm.get('fromDate')?.touched && availForm.get('fromDate')?.invalid}">
+                                <div *ngIf="availForm.controls.fromDate.touched && availForm.controls.fromDate.invalid">
+                                    <small class="text-danger" *ngIf="availForm.controls.fromDate.errors?.required">From Date is required!</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" name="endDate" class="form-control" placeholder="Enter Feedback Comment" formControlName="endDate" [ngClass]="{'is-invalid':availForm.get('endDate')?.touched && availForm.get('endDate')?.invalid}">
+                                <div *ngIf="availForm.controls.endDate.touched && availForm.controls.endDate.invalid">
+                                    <small class="text-danger" *ngIf="availForm.controls.endDate.errors?.required">End Date is required!</small>
+                                </div>
+                            </div>
+                            <button class="card-link" [disabled]="!availForm.valid">Save Dates</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

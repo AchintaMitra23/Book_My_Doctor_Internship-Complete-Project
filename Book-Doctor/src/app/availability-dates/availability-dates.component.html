@@ -1,0 +1,31 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="display-4">ALL DOCTORS</h1><br>
+
+    </div>
+</div>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Availability Id</th>
+            <th>Doctor Id</th>
+            <th>Doctor Name</th>
+            <th>From date</th>
+            <th>End date</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of dates">
+            <td>{{item.availibityId}}</td>
+            <td>{{item.doctorId.doctorId}}</td>
+            <td>{{item.doctorId.doctorName}}</td>
+            <td>{{item.fromDate}}</td>
+            <td>{{item.endDate}}</td>
+
+        </tr>
+    </tbody>
+</table>

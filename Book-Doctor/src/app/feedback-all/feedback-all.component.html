@@ -1,0 +1,29 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="display-4">All Feedback</h1><br>
+
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Doctor Name</th>
+            <th>Feedback</th>
+            <th>Hospital Name</th>
+            <th>Specialist</th>
+            <th>Patient Name</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of feedlist">
+            <td>{{item.doctorId.doctorName}}</td>
+            <td>{{item.feedbackComment}}</td>
+            <td>{{item.doctorId.hospitalName}}</td>
+            <td>{{item.doctorId.speciality}}</td>
+            <td>{{item.patientId.patientName}}</td>
+            <td>{{item.rating}}</td>
+        </tr>
+    </tbody>
+</table>

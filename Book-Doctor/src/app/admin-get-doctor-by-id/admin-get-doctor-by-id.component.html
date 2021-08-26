@@ -1,0 +1,62 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+      <h1 class="display-4">Find Doctors By Id </h1><br>
+     
+    </div>
+  </div>
+
+ 
+
+    
+        <div class="container">
+            <div class="row">
+                       <div id="custom-search-input">
+                                        <div class="input-group col-md-12" style="text-align: center">
+                                            <input type="text" class="search-query form-control" placeholder="Search With id"  name="doctorId" [(ngModel)]="doctorId"/>
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-danger" type="button" (click)="findDoctorById()">
+                                                    <span class=" glyphicon glyphicon-search"></span>search
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+            </div>
+            </div> 
+
+
+            
+<br><br>
+<table class="table table-striped">
+    <thead>
+  <tr>
+    <th>doctor id</th>
+    <th>doctor name</th>
+    <th>speciality</th>
+    <th>location</th>
+    <th>hospital name</th>
+    <th>mobile no</th>
+    <th>charges per visit</th>
+    
+  </tr>
+</thead>
+<tbody>
+  
+    <tr>
+      <td>{{doctors.doctorId}}</td>
+      <td>{{doctors.doctorName}}</td>
+      <td>{{doctors.speciality}}</td>
+      <td>{{doctors.location}}</td>
+      <td>{{doctors.hospitalName}}</td>
+      <td>{{doctors.mobileNo}}</td>
+      <td>{{doctors.chargesPerVisit}}</td>
+      <td class="text-center"><button class="btn btn-danger btn-xs" (click)="deleteDoctorById(doctors.doctorId)"><span class="glyphicon glyphicon-remove"></span>Delete</button></td>
+    
+  
+    
+    
+    
+  </tr>
+</tbody>
+</table> 
+
+ 

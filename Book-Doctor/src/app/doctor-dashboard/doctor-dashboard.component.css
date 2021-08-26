@@ -1,0 +1,93 @@
+h1 {
+    color: darkblue;
+}
+
+
+/*div
+{
+    border: 2px solid red;
+    color:blue;
+    font-family: monospace;
+    font-size: 30px;
+}
+
+button{
+    width: 100px;
+    height:80px;
+    background-color:blueviolet;
+    color: wheat;
+    font-size: 20px;
+} */
+
+.jumbotron {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+button {
+    color: bisque;
+}
+
+.navbar {
+    background-color: wheat;
+}
+
+.navbar-brand::before,
+.navbar-brand::after {
+    content: '|';
+    margin: 0 5px;
+    color: black;
+    position: relative;
+}
+
+.nav-item {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.nav-link {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 1s linear;
+    font-family: cursive;
+}
+
+.nav-link span {
+    color: brown;
+    border-bottom: 2px solid brown;
+    padding-bottom: 2px;
+    margin-right: 10px;
+    transition: all 1s linear;
+}
+
+.nav-link:hover {
+    color: brown;
+}
+
+.nav-link:hover span {
+    color: chocolate;
+}
+
+.btn-login,
+.btn-register {
+    color: darkblue;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 7.5px 12.5px;
+    background-color: lightcoral;
+    margin-right: 5px;
+    text-transform: uppercase;
+    border-radius: 25px;
+}
+
+.btn-register {
+    background-color: transparent;
+    border: 1px solid lightcoral;
+}

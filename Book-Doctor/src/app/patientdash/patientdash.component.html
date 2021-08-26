@@ -1,0 +1,164 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="assets/images/websitelogo.png" alt="" srcset="" height="25" style="padding: 0;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto text-center">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <!-- <img src="https://previews.123rf.com/images/jemastock/jemastock1904/jemastock190411989/123907013-woman-face-cartoon-profile-vector-illustration-graphic-design.jpg" alt="mdo" width="32" height="32" class="rounded-circle"> -->
+                    <i class="fas fa-user-injured fa-lg"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" (click)="gotoProfile()" routerLinkActive="router-link-active">My Profile</a>
+                    <a class="dropdown-item" (click)="logout()" routerLinkActive=" router-link-active">Log out</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-5">Your Health Is Our Priority</h1><br>
+            <p class="lead">24/7 Care is available<br> Stay home! Schedule an appointment and discuss the plan with a doctor. Health problems, even minor ones, can interfere with<br> or even overshadow other aspects of your life. Even relatively minor health issues such
+                as aches, pains,lethargy<br> and indigestion.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 text-center">
+            <img class="rounded-circle" src="https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" alt="Generic placeholder image" width="160" height="140">
+            <h2>View all Doctors</h2>
+            <p>View all our Doctors with Availability Dates.</p>
+            <p><a routerLink="/viewalldates" routerLinkActive="active" class="btn btn-outline-success" role="button">View »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4 text-center">
+            <img class="rounded-circle" src="https://securecdn.pymnts.com/wp-content/uploads/2017/04/Doctor-1000x600.jpg" alt="Generic placeholder image" width="160" height="140">
+            <h2>Book An Appointment</h2>
+            <p>Schedule an Appointment with Doctor of your choice on your conveninent date.</p>
+            <p><a class="btn btn-outline-success" href="#" role="button" routerLink="/appointment">Book »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <!--
+    <div class="col-lg-4 text-center">
+      <img class="rounded-circle" src="https://cdn.britannica.com/s:1500x700,q:85/12/130512-004-AD0A7CA4/campus-Riverside-Ottawa-The-Hospital-Ont.jpg" alt="Generic placeholder image" width="160" height="140">
+      <h2>View Doctors By Hospital Name</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search doctors by hospital name" aria-label="Search"> -->
+        <!-- <button class="btn btn-outline-success" type="submit">logout</button> -->
+        <!-- </form><br>
+      <p><a class="btn btn-outline-success" href="#" role="button">View »</a></p> <br><br><br>
+
+
+    </div>-->
+        <div class="col-lg-4 text-center">
+            <img class="rounded-circle" src="https://azbigmedia.com/wp-content/uploads/2017/11/doctor-shortage.jpg" alt="Generic placeholder image" width="160" height="140">
+            <h2>Filter Doctors</h2>
+            <p>Search Doctor by Speciality, Location or Hospital Name</p>
+            <!-- <p><a class="btn btn-outline-success" href="#" role="button">View »</a></p> -->
+            <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search doctors by specialist" aria-label="Search">  -->
+            <!-- <button class="btn btn-outline-success" type="submit">logout</button> -->
+            <!-- </form> <br> -->
+            <p><a routerLink="/viewdoctorbyspecialist" routerLinkActive="active" class="btn btn-outline-success" href="#" role="button">View »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+
+        <div class="col-lg-4 text-center">
+            <img class="rounded-circle" src="https://azbigmedia.com/wp-content/uploads/2017/11/doctor-shortage.jpg" alt="Generic placeholder image" width="160" height="140">
+            <h2>View own appointments</h2>
+            <p>View list of your own appointment(s)</p>
+            <!-- <p><a class="btn btn-outline-success" href="#" role="button">View »</a></p> -->
+            <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search doctors by specialist" aria-label="Search">  -->
+            <!-- <button class="btn btn-outline-success" type="submit">logout</button> -->
+            <!-- </form> <br> -->
+            <p><a routerLink="active" class="btn btn-outline-success" href="#" role="button" (click)="getPatientId()">View »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+
+        <div class="col-lg-4 text-center">
+            <img class="rounded-circle" src="https://images.indianexpress.com/2020/07/doctor-759.jpeg" alt="Generic placeholder image" width="160" height="140">
+            <h2>Give Feedback</h2>
+            <p>Provide your Feedback, post consultation</p>
+            <p><a class="btn btn-outline-success" href="#" role="button" routerLink="/feedback">Give Your Feedback »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4 text-center">
+            <img class="rounded-circle" src="https://www.cdc.gov/patientsafety/images/patientsafety_456px.jpg" alt="Generic placeholder image" width="160" height="140">
+            <h2>View Feedback</h2>
+            <p>View All Feedback.</p>
+            <p><a routerLink="/allfeedback" routerLinkActive="active" class="btn btn-outline-success" href="#" role="button">View »</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+    </div>
+</div>
+
+<br><br><br>
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2>Our 25+ Specialities</h2><br>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://res-2.cloudinary.com/sharecare/image/upload/c_fill,dpr_1,f_auto,g_faces:center,h_340,w_600/v1527607441/slideshows/dont-go-cardiologist-knowing-first-01" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Cardiologist</h5>
+                    <p class="card-text">Heart problems? Meet our best cardiologists</p>
+                    <!-- <a href="#" class="btn btn-primary">view</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.fisherpointedental.com/wp-content/uploads/2019/10/Fisher-Pointe-_-Blog-Dental-Filling-Procedure-Steps-1024x682.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Dentist</h5>
+                    <p class="card-text">Facing gum problems? Book for a quick dental checkup</p>
+                    <!-- <a href="#" class="btn btn-primary">view</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://after12thwhat.com/wp-content/uploads/2016/01/ENT-Specialist-Career.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">ENT</h5>
+                    <p class="card-text">Best ENT specialists in town</p>
+                    <!-- <a href="#" class="btn btn-primary">View</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://content3.jdmagicbox.com/def_content/gynaecologist_and_obstetrician_doctors/default-gynaecologist-and-obstetrician-doctors-1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Gynaecologist</h5>
+                    <p class="card-text">Meet our trained gynaecologists who care for women's and children's health</p>
+                    <!-- <a href="#" class="btn btn-primary">View</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

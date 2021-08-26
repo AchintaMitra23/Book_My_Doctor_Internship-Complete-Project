@@ -1,0 +1,43 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="display-4">View Feedback By ID</h1><br>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div id="custom-search-input">
+            <div class="input-group col-md-12" style="text-align: center">
+                <input type="text" class="search-query form-control" placeholder="Enter Feedback ID" name="email" [(ngModel)]="id" />
+                <span class="input-group-btn">
+                                        <button class="btn btn-danger" type="button" (click)="getFeedbackbyId()">
+                                            <span class=" glyphicon glyphicon-search"></span>Search
+                </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br><br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>feedbackId</th>
+            <th>feedbackComment</th>
+            <th>doctor name</th>
+            <th>patient name</th>
+            <th>rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{feed.feedbackId}}</td>
+            <td>{{feed.feedbackComment}}</td>
+            <td>{{feed.doctorId.doctorName}}</td>
+            <td>{{feed.patientId.patientName}}</td>
+            <td>{{feed.rating}}</td>
+        </tr>
+    </tbody>
+</table>
